@@ -1,10 +1,10 @@
 global.fs = require('fs');
 global.path = require('path');
 
-const transpiler = require('../../../src/transpiler');
+const transpiler = require('transpiler');
 
 function pre(text, filename) {
-  return [{text: transpiler.loadScript(text).transpiled, filename: filename}];
+  return [{text: transpiler.transpileScript(text).transpiled, filename: filename}];
 }
 
 function post(messages, filename) {

@@ -1,5 +1,5 @@
 {
-  "name": "emumud-eslint-hackmud",
+  "name": "eslint-plugin-emumud",
   "version": "1.0.0",
   "description": "Hackmud eslint rules for emumud. Based of eslint-plugin-hackmud2 by Adam Bosco / KuroTsuto.",
   "keywords": [
@@ -11,5 +11,8 @@
   ],
   "author": "Duck-Industries",
   "main": "src/index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "transpiler": "github:emumud/transpiler"
+  }
 }
