@@ -1,4 +1,4 @@
-export const DATABASE_PREFIX = '$DB_';
-export const PREPROC_D = '$D';
-export const PREPROC_G = '$G';
-export const PREPROC_FMCL = '$FMCL';
+var DATABASE_PREFIX = exports.DATABASE_PREFIX = '$DB_';
+var PREPROC_D = exports.PREPROC_D = '$D';
+var PREPROC_G = exports.PREPROC_G = '$G';
+var PREPROC_FMCL = exports.PREPROC_FMCL = '$FMCL';

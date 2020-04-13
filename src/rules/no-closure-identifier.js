@@ -1,27 +1,36 @@
-export const meta = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var meta = exports.meta = {
   docs: {
-      description: "disallow script closure identifier",
-      category: "Possible Errors",
-      recommended: true
+    description: "disallow script closure identifier",
+    category: "Possible Errors",
+    recommended: true
   },
   fixable: "code",
   schema: [] // no options
-}
+};
 
-export const create = ( context ) => ({
-  "Program > ReturnStatement > FunctionExpression > Identifier.id": ( node ) => {
-    context.report({
-      message: "Script closure must not be named",
-      node: node,
-      data: {
-        identifier: node.name
-      },
-      fix: ( fixer ) => fixer.remove( node )
-    })
-  }
-})
+var create = exports.create = function create(context) {
+  return {
+    "Program > ReturnStatement > FunctionExpression > Identifier.id": function ProgramReturnStatementFunctionExpressionIdentifierId(node) {
+      context.report({
+        message: "Script closure must not be named",
+        node: node,
+        data: {
+          identifier: node.name
+        },
+        fix: function fix(fixer) {
+          return fixer.remove(node);
+        }
+      });
+    }
+  };
+};
 
-export default {
+exports.default = {
   meta,
   create
-}
+};
