@@ -14,18 +14,12 @@
     "emumud/no-closure-siblings": "error"
   },
   "globals": {
-    "logging": "readonly",
+    "process": "off",
+    "console": "off",
 
     "emumud_args": "readonly",
     "emumud_context": "readonly",
 
-    "process": "off",
-    "console": "off",
-
-    "hardline": "readonly",
-    "transpiler": "readonly",
-    "npc": "readonly",
-    "chat": "readonly",
-    "main": "readonly"
+    "emumudInternals": "readonly"
   }
 }
